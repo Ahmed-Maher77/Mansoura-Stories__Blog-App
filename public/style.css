@@ -67,7 +67,7 @@ body {
 #home-page {
 	.posts {
 		background-color: #eee;
-		min-height: calc(100svh - 62.8px);
+		min-height: calc(100vh - 62.8px);
 		.container {
 			display: flex;
 			row-gap: 30px;
@@ -183,7 +183,7 @@ body {
 /*=============== Posts Loader =============== */
 .loader-wraper {
 	width: 100%;
-	height: calc(100svh - 60px);
+	height: calc(100vh - 60px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -257,7 +257,7 @@ body {
 /*=============== Popup Post =============== */
 	.popup-wraper {
 		width: 100%;
-		height: 100vh;
+		height: 100svh;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -619,7 +619,7 @@ body {
 /*=============== Manage Visibility when the user unauthorized =============== */
 /* If the user is not loggined */
 .not-authorized {
-	height: calc(100svh - 50.4px);
+	height: calc(100vh - 50.4px);
 	min-height: 500px;
 	text-align: center;
 	display: flex;
@@ -722,7 +722,7 @@ body {
 /*=============== Dashboard =============== */
 #dashboard-page {
 	background-color: #f1f1f1cf;
-	height: 100svh;
+	height: 100vh;
 	.my-posts {
 		display: none;
 		min-height: calc(100% - 62.8px);
