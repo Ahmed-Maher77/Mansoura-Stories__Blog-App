@@ -325,20 +325,34 @@ function clipText(text, maxLength) {
 
 // ("======================================================================================");
 
+
 // Handle post click to open detailed view
 function openPost(postsWrapper) {
-    let figures;
-    figures = postsWrapper.querySelectorAll(withinDashboard ? "#dashboard-page .img-wrapper" : "#home-page figure");
+    const moreInfoBtn = postsWrapper.querySelector(".more-info");
+    moreInfoBtn.classList.toggle('show', window.innerWidth < 500);
+    window.onresize = () => {
+        console.log(innerWidth);
+        moreInfoBtn.classList.toggle('show', window.innerWidth < 500);
+    }
 
-    figures.forEach((fig) => {
-        // Remove any existing click listeners to avoid duplication
-        fig.onclick = null;
-        fig.onclick = function() {
-            const postId = withinDashboard ? fig.parentElement.getAttribute("data-id") : fig.getAttribute("data-id");
-            const clickedPost = withinDashboard ? userPosts.find(post => post.id === postId) : posts.find(post => post.id === postId);
-            createPopupPost(clickedPost);
+    let figure;
+    if (withinDashboard) {
+        figure = postsWrapper.querySelector(moreInfoBtn.classList.contains("show")? "#dashboard-page .more-info" : '#dashboard-page .img-wrapper');
+    } else {
+        figure = postsWrapper.querySelector("#home-page figure");
+    }
+
+    figure.onclick = null;
+    figure.onclick = function() {
+        let postId;
+        if (withinDashboard) {
+            postId = moreInfoBtn.classList.contains("show")? figure.closest("figure").getAttribute("data-id") : figure.parentElement.getAttribute("data-id");
+        } else {
+            postId = figure.getAttribute("data-id");
         }
-    });
+        const clickedPost = withinDashboard ? userPosts.find(post => post.id === postId) : posts.find(post => post.id === postId);
+        createPopupPost(clickedPost);
+    }
 }
 
 // ("======================================================================================");
@@ -464,6 +478,7 @@ function renderUserPosts(data) {
             <footer>
                 <button type="button" class="edit-post">Edit</button>
                 <button type="button" class="delete-post">Delete</button>
+                <button type="button" class="more-info"><i class="fa-regular fa-eye"></i></button>
             </footer>
         `;
         fragment.appendChild(figure);
@@ -658,39 +673,3 @@ function cancelChanges() {
         }
     });
 }
-
-
-
-
-// Check Internet Connection + go to components
-
-
-
-
-
-
-/**
- * 
- * 
- * 
- * 
- *  
- * 
- * 
- * 
- * 
- * 
- * How can I choose the most suitable programming language to me?
- * Internet History - A quick look back
- * How to handle the client
- * How to convert your idea to code
- * 
- * 
- * 
- * 
- * 
- * 
- * Load More Button (posts) >> show 10 [try select using firebase]
- * comments >> 
- * 
- */
