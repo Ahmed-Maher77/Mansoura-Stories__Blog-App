@@ -724,9 +724,11 @@ body {
 	background-color: #f1f1f1cf;
 	height: 100vh;
 	.my-posts {
+		max-width: 100%;
 		display: none;
 		min-height: calc(100% - 62.8px);
 		.container {
+			max-width: 100%;
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
