@@ -3,10 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Mansoura Stories | Dashboard</title>
+		<title>Login | Mansoura Stories</title>
 		<!-- Meta Data -->
 		<meta name="description" content="Mansoura Stories is a dynamic and fully responsive blog application designed for tech enthusiasts, developers, and computer science professionals. The blog offers insightful articles, tutorials, and discussions centered around programming, technology, and computer science. Built with modern web technologies, it provides a seamless user experience with features such as user authentication, post creation, and a personalized dashboard. The app prioritizes accessibility, performance, and SEO, ensuring optimal browsing for all users.">
-		<meta name="keywords" content="blog app, Mansoura Stories, create posts, share stories, responsive design, Firebase authentication, SEO, high performance, smooth transitions, pagination, localStorage">
+		<meta
+			name="keywords"
+			content="blog app, Mansoura Stories, create posts, share stories, responsive design, Firebase authentication, SEO, high performance, smooth transitions, pagination, localStorage"
+		/>
 		<!-- Open Graph Meta Tags -->
 		<meta property="og:title" content="Mansoura Stories - Blog App">
 		<meta property="og:description" content="Create, share, and discover posts with Mansoura Stories. Fully responsive and optimized for performance and SEO, this app provides an easy-to-use platform for bloggers.">
@@ -23,22 +26,27 @@
 		<!-- Website Icon -->
 		<link rel="icon" href="images/scenario.png" type="image/png" />
 		<!-- CSS Styles -->
-		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="style.css" />
 		<!-- Font Awesome -->
 		<link
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 			rel="stylesheet"
 		/>
 	</head>
-	<body id="dashboard-page">
+	<body class="Login-Page">
 		<!-- Navbar -->
 		<nav id="navbar" aria-label="Main Navigation">
 			<div class="container">
 				<div class="links">
-					<a href="../index.html" title="go to Home Page">Home</a>
+					<a href="./index.html" title="go to Home Page">Home</a>
 					<a href="./createPost.html" title="Create a Post">Create a Post</a>
-					<a class="dashboard-link active" href="" title="My Dashboard">My Dashboard</a>
-					<a class="login-link" href="./login.html" title="go to Login Page"
+					<a class="dashboard-link" href="./dashboard.html" title="My Dashboard"
+						>My Dashboard</a
+					>
+					<a
+						class="login-link active"
+						href="./login.html"
+						title="go to Login Page"
 						>Login</a
 					>
 				</div>
@@ -46,43 +54,18 @@
 			</div>
 		</nav>
 
-        <!-- Message for unauthorized users -->
-        <div class="container">
-            <section class="not-authorized" aria-live="polite">
-                <div>
-                    <h2>You need to be logged in to access the dashboard.</h2>
-                    <a href="./login.html"
-                        >Login <i class="fa-solid fa-right-to-bracket"></i
-                    ></a>
-                </div>
-            </section>
-        </div>
-
 		<!-- Main Section -->
-		<main class="my-posts">
+		<main>
 			<div class="container">
-				<!-- Loader for dynamic content -->
-				<div class="loader-wraper">
-					<div class="spinner">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-            </div>
+				<h1>Sign in with <b>Google</b> to continue</h1>
+				<button class="google-login">
+					<i class="fa-brands fa-google"></i> Login with Google
+				</button>
+			</div>
 		</main>
 
-
 		<!-- Scripts -->
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script src="../js/firebase-config.js" type="module"></script>
-		<script src="../js/script.js" type="module"></script>
+		<script src="./js/script.js" type="module"></script>
+		<script src="./js/firebase-config.js" type="module"></script>
 	</body>
 </html>

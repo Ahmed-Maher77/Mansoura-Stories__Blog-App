@@ -41,7 +41,7 @@ let isAuth = localStorage.getItem("isAuth") === "true" || false;
 googleLoginButton?.addEventListener("click", () => {
 	signInWithPopup(auth, provider)
 		.then((result) => {
-			window.location.pathname = "/";
+			window.location.pathname = "/index.html";
 			localStorage.setItem("isAuth", true);
 			isAuth = true;
 			manageLoginVisibility();
@@ -102,12 +102,12 @@ function managecreatePostVisibility() {
 		createPostForm.style.display = "none";
 	}
 }
-location.pathname === "/pages/createPost.html" && managecreatePostVisibility();
+location.pathname === "/createPost.html" && managecreatePostVisibility();
 
 // ("======================================================================================");
 
 // Create a Post
-const withinCreatePost = location.pathname === "/pages/createPost.html";
+const withinCreatePost = location.pathname === "/createPost.html";
 const imageInput = document.getElementById("image");
 const imageContainer = document.querySelector(".createPost form figure");
 let formSubmitLoading = false;
@@ -252,7 +252,7 @@ function manageLoader() {
 
 // Fetch and Display Posts ordered by timestamp (Home Page)
 const postsContainer = document.querySelector(".posts .container");
-const withinHomePage = location.pathname === "/";
+const withinHomePage = location.pathname === "/index.html";
 let posts;
 const q = query(colRef, orderBy('createdAt'));
 if (withinHomePage) {
@@ -419,12 +419,12 @@ function manageDashboardVisibility() {
 		postsSection.style.display = "none";
 	}
 }
-location.pathname === "/pages/dashboard.html" && manageDashboardVisibility();
+location.pathname === "/dashboard.html" && manageDashboardVisibility();
 
 // ("======================================================================================");
 
 // Dashboard: Fetch User's Posts
-const withinDashboard = location.pathname === "/pages/dashboard.html";
+const withinDashboard = location.pathname === "/dashboard.html";
 const userPostsContainer = document.querySelector('.my-posts .container');
 let userPosts;
 
@@ -519,7 +519,7 @@ function editPost(userPostsContainer) {
         fig.querySelector(".edit-post").onclick = function() {
             const postId = fig.getAttribute("data-id");
             localStorage.setItem("post-id-to-edit", postId);
-            window.location.pathname = '/pages/createPost.html';
+            window.location.pathname = '/createPost.html';
         }
     });
 }
@@ -638,7 +638,7 @@ function handleUpdate(postIdToEdit) {
             errorMsg.style.display = "none";
         });
         localStorage.removeItem("post-id-to-edit");
-        window.location.pathname = '/pages/dashboard.html';
+        window.location.pathname = '/dashboard.html';
     }
 }
 
@@ -653,7 +653,7 @@ function cancelChanges() {
     }).then((result) => {
         if (result.isConfirmed) {
             localStorage.removeItem("post-id-to-edit");
-            window.location.pathname = '/pages/dashboard.html';
+            window.location.pathname = '/dashboard.html';
         } 
         else if (result.dismiss === Swal.DismissReason.cancel) {
             console.log('canceled');
