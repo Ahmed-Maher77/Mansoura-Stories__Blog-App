@@ -286,19 +286,17 @@ function displayPosts(data) {
         const figure = document.createElement("figure");
         figure.setAttribute("data-id", post.id);
         figure.innerHTML = `
-            <figure data-id="${post.id}">
-                <div class="img-wrapper">
-                    <img src="${post.image}" alt="${post.title}" role="img" aria-label="${post.title}" loading="lazy">
-                    <div class="figure-overlay">Read More <i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                </div>
-                <figcaption>
-                    <h3>${clipText(post.title, 70)}</h3>
-                    <p>
-                        <span>Posted by <b>${post.author.name}</b></span>
-                        <span><i class="fa-regular fa-clock"></i> ${getDateFormat(post.createdAt)}</span>
-                    </p>
-                </figcaption>
-            </figure>
+            <div class="img-wrapper">
+                <img src="${post.image}" alt="${post.title}" role="img" aria-label="${post.title}" loading="lazy">
+                <div class="figure-overlay">Read More <i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <figcaption>
+                <h3>${clipText(post.title, 70)}</h3>
+                <p>
+                    <span>Posted by <b>${post.author.name}</b></span>
+                    <span><i class="fa-regular fa-clock"></i> ${getDateFormat(post.createdAt)}</span>
+                </p>
+            </figcaption>
         `;
         fragment.appendChild(figure);
     });
@@ -387,8 +385,8 @@ function createPopupPost(postData) {
 // Close popup post
 function closePopupPost() {
     const closeButton = document.querySelector('.close-btn');
-    const popup = document.querySelector('.popup-wraper');
     closeButton.onclick = () => {
+        const popup = document.querySelector('.popup-wraper');
         popup.remove();
 		body.classList.remove('no-scroll');
     }
@@ -399,8 +397,8 @@ function closePopupPost() {
 // Add shadow to header when popup content scrolls
 function postHeadWhenScroll() {
     const popupBody = document.querySelector('.popup-body');
-    const popupHeader = document.querySelector('.popup-wraper header');
     popupBody.onscroll = function() {
+        const popupHeader = document.querySelector('.popup-wraper header');
         const bodyScroll = popupBody.scrollTop;
         popupHeader.classList.toggle('shadow', bodyScroll > 50);
     }
