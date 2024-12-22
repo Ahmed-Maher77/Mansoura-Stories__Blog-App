@@ -41,7 +41,7 @@ let isAuth = localStorage.getItem("isAuth") === "true" || false;
 googleLoginButton?.addEventListener("click", () => {
 	signInWithPopup(auth, provider)
 		.then((result) => {
-			window.location.pathname = "https://mansoura-stories---blog-app.web.app/";
+			window.location.pathname = "/index.html";
 			localStorage.setItem("isAuth", true);
 			isAuth = true;
 			manageLoginVisibility();
@@ -252,7 +252,7 @@ function manageLoader() {
 
 // Fetch and Display Posts ordered by timestamp (Home Page)
 const postsContainer = document.querySelector(".posts .container");
-const withinHomePage = location.pathname === "https://mansoura-stories---blog-app.web.app/";
+const withinHomePage = location.pathname === "/index.html";
 let posts;
 const q = query(colRef, orderBy('createdAt'));
 if (withinHomePage) {
