@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create a Post | Mansoura Stories</title>
+		<!-- Meta Data -->
+		<meta name="description" content="Mansoura Stories is a dynamic and fully responsive blog application designed for tech enthusiasts, developers, and computer science professionals. The blog offers insightful articles, tutorials, and discussions centered around programming, technology, and computer science. Built with modern web technologies, it provides a seamless user experience with features such as user authentication, post creation, and a personalized dashboard. The app prioritizes accessibility, performance, and SEO, ensuring optimal browsing for all users.">
+		<meta name="keywords" content="blog app, Mansoura Stories, create posts, share stories, responsive design, Firebase authentication, SEO, high performance, smooth transitions, pagination, localStorage">
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Mansoura Stories - Blog App">
+		<meta property="og:description" content="Create, share, and discover posts with Mansoura Stories. Fully responsive and optimized for performance and SEO, this app provides an easy-to-use platform for bloggers.">
+		<meta property="og:image" content="images/scenario.png">
+		<meta property="og:url" content="https://your-website-url.com">
+		<meta property="og:type" content="website">
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Mansoura Stories - Blog App">
+		<meta name="twitter:description" content="Discover and share stories with Mansoura Stories, a responsive and SEO-optimized blog app.">
+		<meta name="twitter:image" content="images/scenario.png">
+		<!-- Additional SEO Techniques -->
+		<link rel="canonical" href="https://your-website-url.com">
+		<!-- Website Icon -->
+		<link rel="icon" href="images/scenario.png" type="image/png" />
+		<!-- CSS Styles -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- Font Awesome -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="createPost">
+		<!-- Navbar -->
+		<nav id="navbar" aria-label="Main Navigation">
+			<div class="container">
+				<div class="links">
+					<a href="./index.html" title="go to Home Page">Home</a>
+					<a class="active" href="./createPost.html" title="Create a Post">Create a Post</a>
+					<a class="dashboard-link" href="./dashboard.html" title="My Dashboard">My Dashboard</a>
+					<a class="login-link" href="./login.html" title="go to Login Page"
+						>Login</a
+					>
+				</div>
+				<button class="google-logout" aria-label="Logout">Logout</button>
+			</div>
+		</nav>
+
+		<div class="container">
+			<!-- Message for unauthorized users -->
+			<section class="not-authorized" aria-live="polite">
+				<div>
+					<h2>You need to be logged in to create a post.</h2>
+					<a href="./login.html" title="Login to your account"
+						>Login <i class="fa-solid fa-right-to-bracket"></i
+					></a>
+				</div>
+			</section>
+
+			<!-- Form for creating a post -->
+			<form action="" aria-labelledby="create-post-form">
+                <h2>Create a new Post <i class="fa-solid fa-pen"></i></h2>
+                <div class="form-body">
+					<!-- Post Title Input -->
+                    <div class="input-wraper">
+                        <label for="title">Post Title:</label>
+                        <input type="text" name="title" id="title" placeholder="post title..." aria-required="true" />
+						<!-- Error message for title -->
+						<div class="error-msg title"><i class="fa-solid fa-circle-exclamation"></i> <span>Title is required and should be at least 8 characters long</span></div>
+                    </div>
+
+					<!-- Upload the Post Image -->
+                    <div class="input-wraper">
+                        <label>Post Image:</label>
+                        <input type="file" name="image" id="image" accept="image/*" aria-required="true" />
+						<span class="image-loader">Uploading...</span>
+						<span><b>Note:</b> Max height for previewing the image is <strong>300px</strong>, so please select a suitable one</span>
+                        <figure>
+                            <img class="post-image-preview" src="" alt="Preview of the selected post image">
+                            <span class="update-image" aria-label="Update Image">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </span>
+                        </figure>
+						<!-- Error message for image -->
+						<div class="error-msg image"><i class="fa-solid fa-circle-exclamation"></i> <span>Post Image is required</span></div>
+                    </div>
+
+					<!-- Textarea for post content -->
+                    <div class="input-wraper">
+                        <label for="content">Post Content:</label>
+                        <textarea name="content" id="content" rows="10" placeholder="what do you want to say?" aria-required="true"></textarea>
+						<!-- Error message for content -->
+						<div class="error-msg content"><i class="fa-solid fa-circle-exclamation"></i> <span>Post Body is required and should be at least 10 characters long</span></div>
+                    </div>
+
+					<!-- Submit button -->
+					<button type="submit" class="submit-btn">Create a Post</button>
+                </div>
+			</form>
+		</div>
+
+		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="./js/firebase-config.js" type="module"></script>
+		<script src="./js/script.js" type="module"></script>
+	</body>
+</html>
