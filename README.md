@@ -1,4 +1,4 @@
-# Mansoura-Stories__Blog-App
+# Mansoura Stories - Blog App
 Mansoura Stories is a dynamic and fully responsive blog application designed for tech enthusiasts, developers, and computer science professionals. The blog offers insightful articles, tutorials, and discussions centered around programming, technology, and computer science. Built with modern web technologies, it provides a seamless user experience with features such as user authentication, post creation, and a personalized dashboard. The app prioritizes accessibility, performance, and SEO, ensuring optimal browsing for all users.
 
 
@@ -39,8 +39,8 @@ Mansoura Stories is a dynamic and fully responsive blog application designed for
 
 ### 📥 Installation Instructions for Local Setup:
 To download and run this project locally:
-1. Clone the Repository:
-=> git clone https://github.com/Ahmed-Maher77/Mansoura-Stories__Blog-App.git
+1. Clone the Repository: <br/>
+=> git clone https://github.com/Ahmed-Maher77/Mansoura-Stories__Blog-App.git <br/>
 => cd Mansoura-Stories__Blog-App
-2. Open in Browser: 
+2. Open in Browser: <br/>
 => use Live Server or just double click on the index.html file
