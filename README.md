@@ -20,7 +20,7 @@ Mansoura Stories is a dynamic and fully responsive blog application designed for
 
 <hr/>
 
-🌐**Demo (Live Preview):** <a href="" target="_blank"></a> 
+🌐**Demo (Live Preview):** <a href="https://mansoura-stories---blog-app.web.app/index.html" target="_blank">https://mansoura-stories---blog-app.web.app/index.html</a> 
 
 <hr/>
 
