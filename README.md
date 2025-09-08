@@ -4,12 +4,30 @@ Mansoura Stories is a dynamic and fully responsive blog application designed for
 
 <hr/>
 
-💻 **Used Technologies:** <br>
-- <strong>Frontend:</strong> HTML/HTML5, CSS/CSS3, JavaScript, ES6+
-- <strong>Backend (for authentication and data storage):</strong> Firebase (Authentication, Firestore Database, Hosting)
-- <strong>Cloud Storage:</strong> Cloudinary for image hosting.
-- <strong>Version Control:</strong> Git
-- <strong>Other:</strong> LocalStorage (for storing authentication data)
+## 💻 Used Technologies  
+
+- **Frontend**  
+  - **HTML5 & CSS3** → Provides semantic structure and responsive styling.  
+  - **JavaScript (ES6+)** → Adds interactivity and modern functionality.  
+
+- **Backend**  
+  - **Firebase Authentication** → Secure user login and registration.  
+  - **Firestore Database** → Cloud-based NoSQL database for data storage.  
+  - **Firebase Hosting** → Fast and reliable deployment of the web app.  
+
+- **Cloud Storage**  
+  - **Cloudinary** → Image hosting, optimization, and delivery.  
+
+- **Version Control**  
+  - **Git** → Tracks code changes and manages collaboration.  
+
+- **Other**  
+  - **LocalStorage** → Stores authentication data in the browser for persistence.  
+
+- **Other Libraries / Tools**  
+  - **SweetAlert2** → Modern pop-ups and alert dialogs.  
+  - **Font Awesome** → Scalable vector icons.  
+  - **Google Fonts** → Custom typography for enhanced UI/UX.  
 
 <br/>
 
