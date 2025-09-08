@@ -29,13 +29,6 @@ Mansoura Stories is a dynamic and fully responsive blog application designed for
   - **Font Awesome** → Scalable vector icons.  
   - **Google Fonts** → Custom typography for enhanced UI/UX.  
 
-<br/>
-
-**Other Libraries / Tools:** <br>
-- <strong>SweetAlert2</strong> (for alerts and pop-ups)
-- <strong>Font Awesome</strong> (for Icons)
-- <strong>Google Fonts</strong>
-
 <hr/>
 
 🌐**Demo (Live Preview):** <a href="https://mansoura-stories---blog-app.web.app/index.html" target="_blank">https://mansoura-stories---blog-app.web.app/index.html</a> 
